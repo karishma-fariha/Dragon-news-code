@@ -12,7 +12,7 @@ const NewsCard = ({ news }) => {
   );
 
   return (
-    <div className="max-w-sm w-full bg-white shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300">
+    <div className="w-full bg-white shadow-sm overflow-hidden hover:shadow-lg transition-all duration-300">
       {/* Header */}
       <div className="flex bg-base-200 items-center justify-between px-4 pt-4">
         <div className="flex items-center gap-3">
@@ -33,13 +33,17 @@ const NewsCard = ({ news }) => {
 
         </button>
       </div>
+      {/* title */}
+      <div className="">
+        <h1 className="font-bold text-xl p-5">{title}</h1>
+      </div>
 
       {/* Image */}
       <div className="px-4 mt-3">
         <img
-          src={thumbnail_url}
+         src={thumbnail_url}
           alt={title}
-          className="rounded-xl w-full h-44 object-cover"
+          className="w-full object-cover"
         />
       </div>
 

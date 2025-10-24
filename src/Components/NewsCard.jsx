@@ -1,9 +1,10 @@
 import React from "react";
 import { CiBookmark, CiShare2 } from "react-icons/ci";
 import { FaStar, FaRegStar, FaEye } from "react-icons/fa";
+import { Link } from "react-router";
 
 const NewsCard = ({ news }) => {
-  const { title, author, rating, total_view, thumbnail_url, details } = news;
+  const { id,title, author, rating, total_view, thumbnail_url, details } = news;
 
   // Format date
   const formattedDate = new Date(author.published_date).toLocaleDateString(
@@ -54,7 +55,7 @@ const NewsCard = ({ news }) => {
                 <>{
                     details.slice(0,200)
                 }...
-                <span className="text-primary font-semibold hover:underline">Read More</span>
+                <Link to={`/newsDetails/${id}`} className="text-primary font-semibold hover:underline">Read More</Link>
                 </>
             ):(
                 details

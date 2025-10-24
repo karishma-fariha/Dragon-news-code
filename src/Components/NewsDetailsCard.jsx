@@ -3,7 +3,7 @@ import vectorImg from '../assets/Vector (2).png'
 import { Link } from 'react-router';
 
 const NewsDetailsCard = ({news}) => {
-    console.log(news)
+    // console.log(news)
     return (
         <div className='p-5 shadow-md'>
             <div className="">
